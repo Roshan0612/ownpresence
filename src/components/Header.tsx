@@ -19,14 +19,14 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const linkBaseClasses = 'text-white hover:text-white/80';
+  const linkBaseClasses = 'text-white hover:text-orange-400 transition-colors duration-200';
   const brandTextColor = 'text-white';
-  const brandAccentColor = 'text-indigo-300';
-  const mobileMenuBg = 'bg-black/80';
+  const brandAccentColor = 'text-orange-400 glow-text';
+  const mobileMenuBg = 'glass';
   const mobileLinkColor = 'text-white';
 
   return (
-    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#233d4d] shadow-lg backdrop-blur' : 'bg-transparent shadow-none backdrop-blur-0'}`}>
+    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? 'glass shadow-lg backdrop-blur-md' : 'bg-transparent shadow-none backdrop-blur-0'}`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
@@ -47,7 +47,7 @@ const Header: React.FC = () => {
           </div>
           <div className="flex items-center space-x-4">
             <button
-              className="md:hidden p-2 rounded-lg hover:bg-black/5 transition-colors duration-200"
+              className="md:hidden p-2 rounded-lg hover:bg-orange-400/10 transition-colors duration-200"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
             >

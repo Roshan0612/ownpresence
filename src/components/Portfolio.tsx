@@ -34,19 +34,19 @@ const Portfolio: React.FC = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-20 bg-white dark:bg-gray-900">
+    <section id="portfolio" className="py-20" style={{ background: 'var(--dora-bg-primary)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="portfolio-badge inline-flex items-center px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full shadow-md mb-4">
-            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Our Work</span>
+          <div className="portfolio-badge inline-flex items-center px-4 py-2 glass rounded-full shadow-md mb-4">
+            <span className="text-sm font-medium text-orange-400">Our Work</span>
           </div>
-          <h2 className="portfolio-title text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          <h2 className="portfolio-title text-4xl md:text-5xl font-bold text-white mb-6">
             Success Stories &{' '}
-            <span className="bg-gradient-to-r from-indigo-600 to-teal-600 dark:from-indigo-400 dark:to-teal-400 bg-clip-text text-transparent">
+            <span className="text-orange-400 glow-text">
               Real Results
             </span>
           </h2>
-          <p className="portfolio-subtitle text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="portfolio-subtitle text-xl text-gray-300 max-w-3xl mx-auto">
             See how we've helped businesses like yours transform their digital presence and achieve remarkable growth.
           </p>
         </div>
@@ -91,7 +91,7 @@ const Portfolio: React.FC = () => {
         </div>
 
         <div className="text-center">
-          <button className="portfolio-cta inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-600 to-teal-600 hover:from-indigo-700 hover:to-teal-700 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+          <button className="portfolio-cta inline-flex items-center px-8 py-4 bg-orange-400 hover:bg-orange-500 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
             View All Projects
             <ArrowRight className="ml-2 h-5 w-5" />
           </button>

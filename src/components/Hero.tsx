@@ -18,7 +18,10 @@ const Hero: React.FC = () => {
   return (
     <section
       className="h-screen pt-0 flex items-center justify-center relative overflow-hidden"
-      style={{ background: '#021526' }}
+      style={{ 
+        background: 'var(--dora-bg-gradient)',
+        color: 'var(--dora-text-primary)'
+      }}
     >
       {/* Floating Bubbles */}
       <Particles

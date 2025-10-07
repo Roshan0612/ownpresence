@@ -73,14 +73,14 @@ const ClientReview: React.FC = () => {
   };
 
   return (
-    <section className="py-12 bg-gray-100 dark:bg-neutral-900 transition-colors reviews-section">
+    <section className="py-12" style={{ background: 'var(--dora-bg-secondary)' }} className="reviews-section">
       <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-gray-100 reviews-title">
+        <h2 className="text-3xl font-bold mb-8 text-center text-white reviews-title">
           Client Reviews
         </h2>
         <form
           onSubmit={handleSubmit}
-          className="mb-8 bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-md border border-gray-200 dark:border-neutral-700 reviews-form"
+          className="mb-8 glass p-6 rounded-lg shadow-md border border-gray-700 reviews-form"
         >
           <div className="mb-4">
             <input
@@ -88,7 +88,7 @@ const ClientReview: React.FC = () => {
               placeholder="Your Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full p-2 rounded border border-gray-300 dark:border-neutral-600"
+              className="w-full p-2 rounded border border-gray-600 bg-gray-800 text-white"
             />
           </div>
           <div className="mb-4">
@@ -96,7 +96,7 @@ const ClientReview: React.FC = () => {
               placeholder="Your Review"
               value={review}
               onChange={(e) => setReview(e.target.value)}
-              className="w-full p-2 rounded border border-gray-300 dark:border-neutral-600"
+              className="w-full p-2 rounded border border-gray-600 bg-gray-800 text-white"
             />
           </div>
           <div className="mb-4 flex items-center">
@@ -116,10 +116,10 @@ const ClientReview: React.FC = () => {
             ))}
           </div>
           {error && <div className="text-red-500 mb-2">{error}</div>}
-          <button
-            type="submit"
-            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
-          >
+            <button
+              type="submit"
+              className="bg-orange-400 text-white px-4 py-2 rounded hover:bg-orange-500 transition"
+            >
             Submit Review
           </button>
         </form>
@@ -127,13 +127,13 @@ const ClientReview: React.FC = () => {
           {reviews.map((r, idx) => (
             <div
               key={idx}
-              className="bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 dark:from-blue-900 dark:via-purple-900 dark:to-pink-900 p-6 rounded-xl shadow-lg border border-transparent review-card transition-all duration-300 hover:scale-105"
+              className="glass p-6 rounded-xl shadow-lg border border-gray-700 review-card transition-all duration-300 hover:scale-105"
               ref={(el) => (cardsRef.current[idx] = el)}
             >
-              <div className="font-semibold text-lg text-gray-800 dark:text-gray-100 mb-2">
+              <div className="font-semibold text-lg text-white mb-2">
                 {r.name}
               </div>
-              <div className="text-gray-700 dark:text-gray-300 mb-2">
+              <div className="text-gray-300 mb-2">
                 {r.review}
               </div>
               <div className="text-yellow-500 font-bold text-lg">

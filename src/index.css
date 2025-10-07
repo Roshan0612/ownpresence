@@ -1,3 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Dora-inspired dark theme */
+:root {
+  --dora-bg-primary: #0a0a0a;
+  --dora-bg-secondary: #1a1a1a;
+  --dora-bg-gradient: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f1419 100%);
+  --dora-text-primary: #ffffff;
+  --dora-text-secondary: #a0a0a0;
+  --dora-accent-orange: #ff6b35;
+  --dora-accent-orange-glow: #ff6b35;
+  --dora-card-bg: rgba(26, 26, 26, 0.8);
+  --dora-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  background: var(--dora-bg-gradient);
+  color: var(--dora-text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Glowing text effect */
+.glow-text {
+  text-shadow: 0 0 20px var(--dora-accent-orange-glow);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dora-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dora-accent-orange);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff8c5a;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(26, 26, 26, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}

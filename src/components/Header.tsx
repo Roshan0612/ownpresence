@@ -30,26 +30,27 @@ const Header: React.FC = () => {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <a href="#" className={`text-2xl font-bold ${brandTextColor}`}>
+            <a href="#" className={`text-xl sm:text-2xl font-bold ${brandTextColor}`}>
               Own<span className={`${brandAccentColor}`}>Presence</span>
             </a>
           </div>
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className={`${linkBaseClasses} transition-colors duration-200 font-medium`}
+                className={`${linkBaseClasses} transition-colors duration-200 font-medium text-sm lg:text-base`}
               >
                 {item.name}
               </a>
             ))}
           </div>
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center">
             <button
-              className="md:hidden p-2 rounded-lg hover:bg-orange-400/10 transition-colors duration-200"
+              className="md:hidden p-2 rounded-lg hover:bg-orange-400/10 transition-colors duration-200 touch-manipulation"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
+              aria-expanded={isMenuOpen}
             >
               <span className="text-white text-xl">{isMenuOpen ? '✕' : '☰'}</span>
             </button>
@@ -62,7 +63,7 @@ const Header: React.FC = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className={`block px-3 py-2 ${mobileLinkColor} hover:opacity-80 transition-colors duration-200`}
+                className={`block px-3 py-3 ${mobileLinkColor} hover:opacity-80 transition-colors duration-200 text-base font-medium`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}

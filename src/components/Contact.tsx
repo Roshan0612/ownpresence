@@ -73,24 +73,24 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20" style={{ background: 'var(--dora-bg-primary)' }} ref={sectionRef}>
+    <section id="contact" className="py-16 sm:py-20" style={{ background: 'var(--dora-bg-primary)' }} ref={sectionRef}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 sm:mb-16">
           <div className="contact-badge inline-flex items-center px-4 py-2 glass rounded-full shadow-md mb-4">
             <span className="text-sm font-medium text-orange-400">Get in Touch</span>
           </div>
-          <h2 className="contact-title text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="contact-title text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 px-4">
             Ready to Transform{' '}
             <span className="text-orange-400 glow-text">
               Your Presence?
             </span>
           </h2>
-          <p className="contact-subtitle text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="contact-subtitle text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
             Let's discuss your project and explore how we can help you achieve your digital goals.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
           <div className="contact-info" ref={infoRef}>
             <h3 className="text-2xl font-bold text-white mb-8">
               Let's Start a Conversation

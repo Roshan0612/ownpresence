@@ -23,32 +23,42 @@ const Hero: React.FC = () => {
         color: 'var(--dora-text-primary)'
       }}
     >
-      {/* Floating Bubbles */}
+      {/* Floating Bubbles - Reduced for mobile performance */}
       <Particles
         id="tsparticles"
         init={particlesInit}
         options={{
-          fpsLimit: 60,
+          fpsLimit: 30,
           particles: {
-            number: { value: 50 },
-            size: { value: { min: 2, max: 6 } },
+            number: { value: window.innerWidth < 768 ? 25 : 50 },
+            size: { value: { min: 1, max: 4 } },
             color: { value: "#ffffff" },
-            move: { enable: true, speed: 1, direction: "none", random: true, outModes: "out" },
-            opacity: { value: 0.7, random: true },
+            move: { enable: true, speed: 0.5, direction: "none", random: true, outModes: "out" },
+            opacity: { value: 0.5, random: true },
           },
           detectRetina: true,
+          responsive: [
+            {
+              maxWidth: 768,
+              options: {
+                particles: {
+                  number: { value: 20 }
+                }
+              }
+            }
+          ]
         }}
         style={{ position: 'absolute', width: '100%', height: '100%' }}
       />
 
-      {/* Spline Viewer */}
+      {/* Spline Viewer - Optimized for mobile */}
       <div
         className="absolute inset-0 w-full h-full"
         style={{
           background: 'transparent',
           pointerEvents: 'auto',
           overflow: 'hidden',
-          clipPath: 'inset(3% 3% 3% 3%)',
+          clipPath: 'inset(5% 5% 5% 5%)',
         }}
       >
         <spline-viewer
@@ -59,13 +69,13 @@ const Hero: React.FC = () => {
             width: '100%',
             height: '100%',
             display: 'block',
-            transform: 'scale(2)',
+            transform: window.innerWidth < 768 ? 'scale(1.5)' : 'scale(2)',
             transformOrigin: '50% 50%',
             margin: '0 auto',
             position: 'absolute',
             top: '50%',
             left: '50%',
-            translate: '-37% -50%',
+            translate: window.innerWidth < 768 ? '-50% -50%' : '-37% -50%',
             background: 'transparent',
           }}
         ></spline-viewer>

@@ -73,7 +73,7 @@ const ClientReview: React.FC = () => {
   };
 
   return (
-    <section className="py-12" style={{ background: 'var(--dora-bg-secondary)' }} className="reviews-section">
+    <section className="py-12 reviews-section" style={{ background: 'var(--dora-bg-secondary)' }} >
       <div className="max-w-4xl mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8 text-center text-white reviews-title">
           Client Reviews
